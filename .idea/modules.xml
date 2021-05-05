@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BikeRide/BikeRide.iml" filepath="$PROJECT_DIR$/BikeRide/BikeRide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Bike_Ride.iml" filepath="$PROJECT_DIR$/Java_Bike_Ride.iml" />
+      <module fileurl="file://$PROJECT_DIR$/calculate_vat/calculate_vat.iml" filepath="$PROJECT_DIR$/calculate_vat/calculate_vat.iml" />
+    </modules>
+  </component>
+</project>

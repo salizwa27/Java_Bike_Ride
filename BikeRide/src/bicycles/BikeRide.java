@@ -2,21 +2,21 @@ package bicycles;
 
 public class BikeRide {
 
-    Bicycle bicycle = new Bicycle();
+    public final Bicycle bicycle;
 
     public BikeRide (Bicycle bicycle){
         this.bicycle = bicycle;
     }
 
 
-    public static void main(String[] args) {
-
-        Bicycle bicycle = new Bicycle();
-        BikeRide bikeRide = new BikeRide(bicycle);
-        bikeRide.ride();
-
-      System.out.println(bicycle.currentSpeed());
-    }
+//    public static void main(String[] args) {
+//
+//        Bicycle bicycle = new Bicycle();
+//        BikeRide bikeRide = new BikeRide(bicycle);
+//        bikeRide.ride();
+//
+//      System.out.println(bicycle.currentSpeed());
+//    }
 
 
     public void ride() {

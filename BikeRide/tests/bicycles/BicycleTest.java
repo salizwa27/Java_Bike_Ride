@@ -1,6 +1,9 @@
 package bicycles;
 
 
+import bicycles.models.MountainBike;
+import bicycles.models.RoadBike;
+import bicycles.models.Tandem;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -133,6 +136,71 @@ public class BicycleTest {
         bicycle.brake();
         bicycle.accelerate();
         assertEquals(18, bicycle.currentSpeed());
+
+    }
+
+    @Test
+    public void shouldAccelerateTandem() {
+
+        Tandem bicycle = new Tandem();
+        bicycle.accelerate();
+        assertEquals(12, bicycle.currentSpeed());
+    }
+
+    @Test
+    public void shouldAccelerateAndBrakeCorrectUsingTandem() {
+
+        Tandem bicycle = new Tandem();
+        bicycle.accelerate();
+        bicycle.brake();
+        assertEquals(5, bicycle.currentSpeed());
+
+    }
+
+    @Test
+    public void shouldDoMultipleAcceleratesCorrectlyUsingTandem() {
+
+        Tandem bicycle = new Tandem();
+        bicycle.accelerate();
+        bicycle.accelerate();
+        bicycle.accelerate();
+        assertEquals(36, bicycle.currentSpeed());
+
+    }
+
+    @Test
+    public void shouldDoMultipleAccelerateAndBrakesCorrectlyTandem() {
+
+        Tandem bicycle = new Tandem();
+        bicycle.accelerate();
+        bicycle.brake();
+        bicycle.accelerate();
+        bicycle.brake();
+        bicycle.brake();
+        assertEquals(3, bicycle.currentSpeed());
+
+    }
+
+    @Test
+    public void shouldBeAbleToStopTandem() {
+
+        Tandem bicycle = new Tandem();
+        bicycle.accelerate();
+        bicycle.brake();
+        bicycle.accelerate();
+        bicycle.stop();
+        assertEquals(0, bicycle.currentSpeed());
+
+    }
+
+    @Test
+    public void shouldBeAbleToTakeTandem() {
+
+        Tandem bicycle = new Tandem();
+        bicycle.accelerate();
+        bicycle.brake();
+        bicycle.accelerate();
+        assertEquals(17, bicycle.currentSpeed());
 
     }
 

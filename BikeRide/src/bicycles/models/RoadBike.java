@@ -23,12 +23,12 @@ public class RoadBike extends BicycleBase {
 //        return speed = 0;
 //    }
 
-    public int accelerate() {
-        return changeSpeed(+11);
+    public void accelerate() {
+        changeSpeed(+11);
     }
 
-    public int brake() {
-        return changeSpeed(-4);
+    public void brake() {
+        changeSpeed(-4);
     }
 //    public int stop() {
 //        return speed = 0;

@@ -4,13 +4,13 @@ public interface Bicycle {
 
 //    int speed;
 
-    public int accelerate();
+    public void accelerate();
 
-    public int brake();
+    public void brake();
 
     public int currentSpeed();
 
-    public int stop();
+    public void stop();
 
 }
 

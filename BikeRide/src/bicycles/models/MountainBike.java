@@ -7,13 +7,12 @@ public class MountainBike extends BicycleBase {
 
 //    private int speed;
 //
-    public int accelerate() {
-        return changeSpeed(+5);
+    public void accelerate() {
+        changeSpeed(+5);
     }
 
-    public int brake() {
-
-        return changeSpeed(-3);
+    public void brake() {
+        changeSpeed(-3);
     }
 
 //    public int currentSpeed() {

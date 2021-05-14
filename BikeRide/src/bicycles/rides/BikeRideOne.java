@@ -8,6 +8,7 @@ public class BikeRideOne implements BikeRide {
     public Bicycle bicycle;
 
     public BikeRideOne(Bicycle bicycle){
+
         this.bicycle = bicycle;
     }
 

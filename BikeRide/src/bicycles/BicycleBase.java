@@ -6,17 +6,18 @@ public abstract class BicycleBase implements Bicycle{
 
     private int speed;
 
-    protected int changeSpeed(int changeRate){
-        return speed += changeRate;
+    protected void changeSpeed(int changeRate){
+        speed += changeRate;
 
     }
 
+    @Override
     public int currentSpeed() {
         return speed;
     }
-
-    public int stop() {
-        return speed = 0;
+    @Override
+    public void stop() {
+        speed = 0;
     }
 
 

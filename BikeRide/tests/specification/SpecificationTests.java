@@ -1,6 +1,7 @@
 package specification;
 
 import bicycles.Bicycle;
+import bicycles.BicycleType;
 import bicycles.BikeRide;
 import bicycles.rides.*;
 import bicycles.specification.BicycleFromSpec;
@@ -12,7 +13,7 @@ public class SpecificationTests {
 
     @Test
     public void shouldBeAbleToUseBikeRideOneWithRoadBike() {
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
         Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
         BikeRide rBikeOne = new BikeRideOne(roadBike);
         rBikeOne.ride(roadBike);
@@ -21,7 +22,7 @@ public class SpecificationTests {
 
     @Test
     public void shouldBeAbleToUseBikeRideTwoWithRoadBike() {
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
         Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
         BikeRide rBikeTwo = new BikeRideTwo(roadBike);
         rBikeTwo.ride(roadBike);
@@ -30,7 +31,7 @@ public class SpecificationTests {
 
     @Test
     public void shouldBeAbleToUseBikeRideThreeWithRoadBike() {
-        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4);
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, 4, BicycleType.RoadBike);
         Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
         BikeRide rBikeThree = new BikeRideThree(roadBike);
         rBikeThree.ride(roadBike);
@@ -39,7 +40,7 @@ public class SpecificationTests {
 
     @Test
     public void shouldBeAbleToUseBikeRideOneWithMountainBike() {
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3);
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3, BicycleType.MountainBike);
         Bicycle mountainBike = new BicycleFromSpec(mountainBikeSpec);
         BikeRide rBikeOne = new BikeRideOne(mountainBike);
         rBikeOne.ride(mountainBike);
@@ -48,7 +49,7 @@ public class SpecificationTests {
 
     @Test
     public void shouldBeAbleToUseBikeRideTwoWithMountainBike() {
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3);
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3, BicycleType.MountainBike);
         Bicycle mountainBike = new BicycleFromSpec(mountainBikeSpec);
         BikeRide rBikeTwo = new BikeRideTwo(mountainBike);
         rBikeTwo.ride(mountainBike);
@@ -57,7 +58,7 @@ public class SpecificationTests {
 
     @Test
     public void shouldBeAbleToUseBikeRideThreeWithMountainBike() {
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3);
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, 3, BicycleType.MountainBike);
         Bicycle mountainBike = new BicycleFromSpec(mountainBikeSpec);
         BikeRide rBikeThree = new BikeRideThree(mountainBike);
         rBikeThree.ride(mountainBike);
@@ -66,7 +67,7 @@ public class SpecificationTests {
 
     @Test
     public void shouldBeAbleToUseBikeRideOneWithTandem() {
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(12, 7);
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(12, 7, BicycleType.Tandem);
         Bicycle tandem = new BicycleFromSpec(mountainBikeSpec);
         BikeRide rBikeOne = new BikeRideOne(tandem);
         rBikeOne.ride(tandem);
@@ -75,7 +76,7 @@ public class SpecificationTests {
 
     @Test
     public void shouldBeAbleToUseBikeRideTwoWithTandem() {
-        BicycleSpecification tandemSpec = new BicycleSpecification(12, 7);
+        BicycleSpecification tandemSpec = new BicycleSpecification(12, 7, BicycleType.Tandem);
         Bicycle tandem = new BicycleFromSpec(tandemSpec);
         BikeRide rBikeTwo = new BikeRideTwo(tandem);
         rBikeTwo.ride(tandem);
@@ -84,7 +85,7 @@ public class SpecificationTests {
 
     @Test
     public void shouldBeAbleToUseBikeRideThreeWithTandem() {
-        BicycleSpecification mountainBikeSpec = new BicycleSpecification(12, 7);
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(12, 7, BicycleType.Tandem);
         Bicycle tandem = new BicycleFromSpec(mountainBikeSpec);
         BikeRide rBikeThree = new BikeRideThree(tandem);
         rBikeThree.ride(tandem);

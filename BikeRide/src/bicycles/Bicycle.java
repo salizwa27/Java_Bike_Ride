@@ -12,6 +12,8 @@ public interface Bicycle {
 
     public void stop();
 
+    BicycleType getBicycleType();
+
 }
 
 

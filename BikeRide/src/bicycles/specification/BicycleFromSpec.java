@@ -1,6 +1,7 @@
 package bicycles.specification;
 
 import bicycles.BicycleBase;
+import bicycles.BicycleType;
 
 public class BicycleFromSpec extends BicycleBase {
 
@@ -18,6 +19,11 @@ public class BicycleFromSpec extends BicycleBase {
 
     @Override
     public void brake() {
-        changeSpeed(bicycleSpec.getAccelerationSpeed());
+        changeSpeed(bicycleSpec.getBrakeSpeed());
+    }
+
+    @Override
+    public BicycleType getBicycleType() {
+        return this.bicycleSpec.getBicycleType();
     }
 }

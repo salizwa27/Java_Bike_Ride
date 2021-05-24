@@ -6,8 +6,6 @@ import bicycles.BicycleType;
 
 public class MountainBike extends BicycleBase {
 
-//    private int speed;
-//
     public void accelerate() {
         changeSpeed(+5);
     }
@@ -20,22 +18,4 @@ public class MountainBike extends BicycleBase {
     public BicycleType getBicycleType() {
     return  BicycleType.MountainBike;
     }
-
-
-//    public int currentSpeed() {
-//        return speed;
-//    }
-//
-//    public int stop() {
-//        return speed = 0;
-//    }
-
-
-//    public int currentSpeed() {
-//        return speed;
-//    }
-
-//    public int stop() {
-//        return speed = 0;
-//    }
 }

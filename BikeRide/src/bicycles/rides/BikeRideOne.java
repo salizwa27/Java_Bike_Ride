@@ -12,17 +12,6 @@ public class BikeRideOne implements BikeRide {
         this.bicycle = bicycle;
     }
 
-
-//    public static void main(String[] args) {
-//
-//        Bicycle bicycle = new Bicycle();
-//        BikeRide bikeRide = new BikeRide(bicycle);
-//        bikeRide.ride();
-//
-//      System.out.println(bicycle.currentSpeed());
-//    }
-
-
     public void ride(Bicycle bicycle) {
         this.bicycle.accelerate();
         this.bicycle.accelerate();

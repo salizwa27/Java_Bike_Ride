@@ -15,7 +15,7 @@ public class FunRideTests {
     @Test
     public void shouldBeAbleToAcceptARoadBike() {
         FunRide funRide = new FunRide(1);
-        BicycleSpecification roadBike = new BicycleSpecification(11, -4, BicycleType.RoadBike);
+        BicycleSpecification roadBike = new BicycleSpecification(11, 4, BicycleType.RoadBike);
 
         BicycleFromSpec roadBike1 = new BicycleFromSpec(roadBike);
 
@@ -27,7 +27,7 @@ public class FunRideTests {
     @Test
     public void shouldBeAbleToAcceptMoreThanOneRoadBike() {
         FunRide funRide = new FunRide(4);
-        BicycleSpecification roadBike = new BicycleSpecification(11, -4, BicycleType.RoadBike);
+        BicycleSpecification roadBike = new BicycleSpecification(11, 4, BicycleType.RoadBike);
 
         BicycleFromSpec roadBike1 = new BicycleFromSpec(roadBike);
         BicycleFromSpec roadBike2 = new BicycleFromSpec(roadBike);
@@ -46,7 +46,7 @@ public class FunRideTests {
     @Test
     public void shouldBeAbleToAcceptAMountainBike() {
         FunRide funRide = new FunRide(1);
-        BicycleSpecification mountainBike = new BicycleSpecification(5, -3, BicycleType.MountainBike);
+        BicycleSpecification mountainBike = new BicycleSpecification(5, 3, BicycleType.MountainBike);
 
         BicycleFromSpec mountainBike1 = new BicycleFromSpec(mountainBike);
 
@@ -58,7 +58,7 @@ public class FunRideTests {
     @Test
     public void shouldBeAbleToAcceptMoreThanOneMountainBike() {
         FunRide funRide = new FunRide(2);
-        BicycleSpecification mountainBike = new BicycleSpecification(5, -3, BicycleType.MountainBike);
+        BicycleSpecification mountainBike = new BicycleSpecification(5, 3, BicycleType.MountainBike);
 
         BicycleFromSpec mountainBike1 = new BicycleFromSpec(mountainBike);
         BicycleFromSpec mountainBike2 = new BicycleFromSpec(mountainBike);
@@ -72,7 +72,7 @@ public class FunRideTests {
     @Test
     public void shouldBeAbleToAcceptTandem() {
         FunRide funRide = new FunRide(1);
-        BicycleSpecification tandem = new BicycleSpecification(12, -7, BicycleType.Tandem);
+        BicycleSpecification tandem = new BicycleSpecification(12, 7, BicycleType.Tandem);
 
         BicycleFromSpec tandem1 = new BicycleFromSpec(tandem);
 
@@ -84,7 +84,7 @@ public class FunRideTests {
     @Test
     public void shouldBeAbleToAcceptMoreThanOneTandem() {
         FunRide funRide = new FunRide(6);
-        BicycleSpecification tandem = new BicycleSpecification(12, -7, BicycleType.Tandem);
+        BicycleSpecification tandem = new BicycleSpecification(12, 7, BicycleType.Tandem);
 
         BicycleFromSpec tandem1 = new BicycleFromSpec(tandem);
         BicycleFromSpec tandem2 = new BicycleFromSpec(tandem);
@@ -107,9 +107,9 @@ public class FunRideTests {
     @Test
     public void shouldBeAbleToAcceptAllThreeTypesOfBikes() {
         FunRide funRide = new FunRide(3);
-        BicycleSpecification roadBike = new BicycleSpecification(11, -4, BicycleType.RoadBike);
-        BicycleSpecification mountainBike = new BicycleSpecification(5, -3, BicycleType.MountainBike);
-        BicycleSpecification tandem = new BicycleSpecification(12, -7, BicycleType.Tandem);
+        BicycleSpecification roadBike = new BicycleSpecification(11, 4, BicycleType.RoadBike);
+        BicycleSpecification mountainBike = new BicycleSpecification(5, 3, BicycleType.MountainBike);
+        BicycleSpecification tandem = new BicycleSpecification(12, 7, BicycleType.Tandem);
 
 
         BicycleFromSpec roadBike1 = new BicycleFromSpec(roadBike);

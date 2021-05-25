@@ -17,7 +17,7 @@ public class SpecificationTests {
         Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
         BikeRide rBikeOne = new BikeRideOne(roadBike);
         rBikeOne.ride(roadBike);
-        assertEquals(roadBike.currentSpeed(),52);
+        assertEquals(roadBike.currentSpeed(),36);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class SpecificationTests {
         Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
         BikeRide rBikeTwo = new BikeRideTwo(roadBike);
         rBikeTwo.ride(roadBike);
-        assertEquals(roadBike.currentSpeed(),85);
+        assertEquals(roadBike.currentSpeed(),69);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class SpecificationTests {
         Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
         BikeRide rBikeThree = new BikeRideThree(roadBike);
         rBikeThree.ride(roadBike);
-        assertEquals(roadBike.currentSpeed(),98);
+        assertEquals(roadBike.currentSpeed(),34);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class SpecificationTests {
         Bicycle mountainBike = new BicycleFromSpec(mountainBikeSpec);
         BikeRide rBikeOne = new BikeRideOne(mountainBike);
         rBikeOne.ride(mountainBike);
-        assertEquals(mountainBike.currentSpeed(),26);
+        assertEquals(mountainBike.currentSpeed(),14);
     }
 
     @Test
@@ -53,7 +53,7 @@ public class SpecificationTests {
         Bicycle mountainBike = new BicycleFromSpec(mountainBikeSpec);
         BikeRide rBikeTwo = new BikeRideTwo(mountainBike);
         rBikeTwo.ride(mountainBike);
-        assertEquals(mountainBike.currentSpeed(),41);
+        assertEquals(mountainBike.currentSpeed(),29);
     }
 
     @Test
@@ -62,7 +62,7 @@ public class SpecificationTests {
         Bicycle mountainBike = new BicycleFromSpec(mountainBikeSpec);
         BikeRide rBikeThree = new BikeRideThree(mountainBike);
         rBikeThree.ride(mountainBike);
-        assertEquals(mountainBike.currentSpeed(),54);
+        assertEquals(mountainBike.currentSpeed(),6);
     }
 
     @Test
@@ -71,7 +71,7 @@ public class SpecificationTests {
         Bicycle tandem = new BicycleFromSpec(tandemSpec);
         BikeRide rBikeOne = new BikeRideOne(tandem);
         rBikeOne.ride(tandem);
-        assertEquals(tandem.currentSpeed(),62);
+        assertEquals(tandem.currentSpeed(),34);
     }
 
     @Test
@@ -80,7 +80,7 @@ public class SpecificationTests {
         Bicycle tandem = new BicycleFromSpec(tandemSpec);
         BikeRide rBikeTwo = new BikeRideTwo(tandem);
         rBikeTwo.ride(tandem);
-        assertEquals(tandem.currentSpeed(),98);
+        assertEquals(tandem.currentSpeed(),70);
     }
 
     @Test
@@ -89,7 +89,7 @@ public class SpecificationTests {
         Bicycle tandem = new BicycleFromSpec(mountainBikeSpec);
         BikeRide rBikeThree = new BikeRideThree(tandem);
         rBikeThree.ride(tandem);
-        assertEquals(tandem.currentSpeed(),128);
+        assertEquals(tandem.currentSpeed(),16);
     }
 
 }

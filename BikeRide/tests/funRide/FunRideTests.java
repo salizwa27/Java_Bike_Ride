@@ -125,5 +125,85 @@ public class FunRideTests {
         assertEquals(3, funRide.getEnteredCount());
     }
 
+    @Test
+    public void shouldBeAbleToGetCountForMoreThanOneType() {
+        FunRide funRide = new FunRide(6);
+        BicycleSpecification tandem = new BicycleSpecification(12, 7, BicycleType.Tandem);
+        BicycleSpecification roadBike = new BicycleSpecification(11, 4, BicycleType.RoadBike);
+
+        BicycleFromSpec tandem1 = new BicycleFromSpec(tandem);
+        BicycleFromSpec tandem2 = new BicycleFromSpec(tandem);
+        BicycleFromSpec tandem3 = new BicycleFromSpec(tandem);
+
+        BicycleFromSpec roadBike1 = new BicycleFromSpec(roadBike);
+        BicycleFromSpec roadBike2 = new BicycleFromSpec(roadBike);
+        BicycleFromSpec roadBike3 = new BicycleFromSpec(roadBike);
+
+        funRide.getCountForType(BicycleType.RoadBike);
+        funRide.getCountForType(BicycleType.Tandem);
+
+        funRide.accept(tandem1);
+        funRide.accept(tandem2);
+        funRide.accept(tandem3);
+
+        funRide.accept(roadBike1);
+        funRide.accept(roadBike2);
+        funRide.accept(roadBike3);
+
+        assertEquals(funRide.getCountForType(BicycleType.RoadBike), 3);
+        assertEquals( funRide.getCountForType(BicycleType.Tandem),3);
+
+    }
+
+    @Test
+    public void shouldBeAbleToGetCountForType() {
+        FunRide funRide = new FunRide(6);
+        BicycleSpecification mountainBike = new BicycleSpecification(5, 3, BicycleType.MountainBike);
+
+        BicycleFromSpec mountainBike1 = new BicycleFromSpec(mountainBike);
+
+        funRide.getCountForType(BicycleType.MountainBike);
+
+        funRide.accept(mountainBike1);
+
+        assertEquals(funRide.getCountForType(BicycleType.MountainBike), 1);
+    }
+
+    @Test
+    public void shouldBeAbleToGetCountForAllThreeTypes() {
+        FunRide funRide = new FunRide(6);
+        BicycleSpecification tandem = new BicycleSpecification(12, 7, BicycleType.Tandem);
+        BicycleSpecification roadBike = new BicycleSpecification(11, 4, BicycleType.RoadBike);
+        BicycleSpecification mountainBike = new BicycleSpecification(5, 3, BicycleType.MountainBike);
+
+        BicycleFromSpec tandem1 = new BicycleFromSpec(tandem);
+
+        BicycleFromSpec mountainBike1 = new BicycleFromSpec(mountainBike);
+        BicycleFromSpec mountainBike2 = new BicycleFromSpec(mountainBike);
+
+        BicycleFromSpec roadBike1 = new BicycleFromSpec(roadBike);
+        BicycleFromSpec roadBike2 = new BicycleFromSpec(roadBike);
+        BicycleFromSpec roadBike3 = new BicycleFromSpec(roadBike);
+
+        funRide.getCountForType(BicycleType.RoadBike);
+        funRide.getCountForType(BicycleType.Tandem);
+        funRide.getCountForType(BicycleType.MountainBike);
+
+        funRide.accept(tandem1);
+
+        funRide.accept(mountainBike1);
+        funRide.accept(mountainBike2);
+
+        funRide.accept(roadBike1);
+        funRide.accept(roadBike2);
+        funRide.accept(roadBike3);
+
+        assertEquals(funRide.getCountForType(BicycleType.RoadBike), 3);
+        assertEquals( funRide.getCountForType(BicycleType.MountainBike),2);
+        assertEquals( funRide.getCountForType(BicycleType.Tandem),1);
+
+
+    }
+
 
 }
